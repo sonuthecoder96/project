@@ -52,10 +52,6 @@ The rotation calculation logic is isolated in `utils/rotationLogic.js`, separate
 The system strictly tracks the lifecycle of an alert.
 *   **Why:** This provides auditability. Every action (Trigger, Ack, Resolve) generates a timestamped entry in the `history` array of the incident document, crucial for Post-Incident Reviews (post-mortems).
 
-### 4. Polling for Real-Time Updates
-The frontend uses `setInterval` to poll the API every 5 seconds.
-*   **Why:** Given the 3-day prototype constraint, polling is simpler and more robust to implement than WebSockets. It ensures the dashboard eventually matches the server state (Eventual Consistency).
-
 ---
 
 ## 🚧 Limitations & Future Improvements
@@ -97,8 +93,7 @@ npm start
 
 ### 3. Seed the Database (Important!)
 Before testing, you must populate the database with initial Services and Users.
-*   **Option A:** Click the **"Reset / Seed Database"** button in the top-left of the UI.
-*   **Option B:** Run this command in your terminal:
+*   ** Run this command in your terminal:
     ```bash
     curl -X POST http://localhost:5000/api/services/seed
     ```
