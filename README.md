@@ -9,7 +9,6 @@
 The system creates a clean separation between **Data**, **Logic**, and **Presentation**, built on the **MERN Stack** (MongoDB, Express, React, Node.js).
 
 ### High-Level Diagram
-### High-Level Diagram
 
 ```mermaid
 graph TD
