@@ -71,14 +71,16 @@ If I had more time, I would address the following:
 
 ### Prerequisites
 *   Node.js (v14+)
-*   MongoDB (Running locally on port 27017)
+*   MongoDB 
 
 ### 1. Backend Setup
 ```bash
 cd backend
 npm install
+npm install express mongoose
+npm install --save-dev nodemon
 # Start the server (runs on port 5000)
-node index.js
+npm run dev
 ```
 
 ### 2. Frontend Setup
@@ -87,17 +89,9 @@ Open a new terminal window:
 cd client
 npm install
 # Start the React app (opens localhost:3000)
-npm start
+npm run start
 ```
 
-### 3. Seed the Database (Important!)
-Before testing, you must populate the database with initial Services and Users.
-*   ** Run this command in your terminal:
-    ```bash
-    curl -X POST http://localhost:5000/api/services/seed
-    ```
-
----
 
 ## 🧪 Example Workflows
 
@@ -120,3 +114,12 @@ Before testing, you must populate the database with initial Services and Users.
     curl -X POST http://localhost:5000/api/incidents/escalate
     ```
 4.  **Result:** The backend terminal will log `[ESCALATION] Incident X is stale. Notifying Manager.` and an entry is added to the incident history.
+
+
+## 🎥 Demo
+
+- 🎬 **Demo Video:** Available in the `demo_video/` folder  
+- 🖥️ **Backend Terminal Logs (Screenshots):** Available in the `demo_video/` folder
+
+
+
